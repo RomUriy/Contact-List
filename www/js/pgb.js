@@ -44,3 +44,4 @@ var options = new ContactFindOptions();
 options.filter = "";
 options.multiple = true;
 var filter = ["displayName", "addresses"];
+navigator.contacts.find(filter, onSuccess, onError, options);
