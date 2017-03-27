@@ -3,20 +3,13 @@ function init() {
 }
 
 function onDeviceReady() {
-	navigator.notification.beep(1);
-}
 
+    var options = new ContactFindOptions();
+options.filter = "*";
+options.multiple = true;
+var filter = ["displayName", "addresses"];
+navigator.contacts.find(filter, onSuccess, onError, options);
 
-function BusinessCard() {
-
-	info =  'Roman Yurkevych' + '\n' +
-	        'romuriy@gmail.com' + '\n' +
-	        'www.cemoe.com' + '\n' +
-	        'KrDUIs1012' + '\n' +
-			'Applied Informatics UEK' + '\n';
-
-	navigator.notification.alert(info);
-	
 }
 
 
@@ -40,8 +33,3 @@ function onError(contactError) {
 };
  
 // find all contacts 
-var options = new ContactFindOptions();
-options.filter = "";
-options.multiple = true;
-var filter = ["displayName", "addresses"];
-navigator.contacts.find(filter, onSuccess, onError, options);

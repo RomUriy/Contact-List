@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<script src="js/pgb.js"></script>
-		<script src="cordova.js"></script>
-	</head>
-	<body onload="init()">
-		<h1>Contact list</h1>
-		<h3>Roman Yurkevych</h3>
-		<p id="dp"></p>
-		<input type="button" onclick="BusinessCard()" value="Open more">
-		<br>
-		<input type="button" onclick="navigator.contacts.find(filter, onSuccess, onError, options);" value="Find contact">
-		  
-		  <script type='text/javascript'>
-		navigator.contacts.find(filter, onSuccess, onError, options)
-		</script>
-	</body>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="cordova.js"></script>
+	<script src="js/pgb.js"></script>
+</head>
+<body onload="init()">
+	<div id="data">
+		<h1>It's Contact list App</h1>
+		<p id="dp">It is your contacts database of device</p>
+
+	</div>
+
+</body>
 </html>
